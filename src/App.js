@@ -7,12 +7,12 @@ import TopPicks from "./pages/top-picks";
 
 class App extends React.Component {
   componentDidMount() {
-    if (window.safari) {
+    history.pushState(null, null, location.href);
+
+    window.onpopstate = function (event) {
       history.pushState(null, null, location.href);
-      window.onpopstate = function (event) {
-        history.go(1);
-      };
-    }
+      history.go(1);
+    };
   }
 
   render() {
