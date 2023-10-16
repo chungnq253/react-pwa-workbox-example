@@ -223,5 +223,5 @@ p {
 
 html,
 body {
-  overscroll-behavior-x: none;
+  overscroll-behavior: none;
 }
